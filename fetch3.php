@@ -8,6 +8,7 @@ if(isset($_POST["query"]))
 $query = "
   SELECT * FROM data_magazine 
   WHERE file_name LIKE '%".$fname."%'
+  LIMIT 1
  ";
  
 }
@@ -76,7 +77,7 @@ $names = implode(" | ", $test);
 }
 else
 {
- echo 'Data Not Found';
+ echo 'За съжаление не откриваме информация за вашето търсене!';
 }
 
 ?>
